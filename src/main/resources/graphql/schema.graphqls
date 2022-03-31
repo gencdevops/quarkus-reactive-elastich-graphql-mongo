@@ -1,0 +1,23 @@
+type Query{
+    reportLog : [ReportLog]
+    reportLogsByReportKey (reportLogKey: String) : [ReportLog]
+    reportLogsByMsisdn (msisdn: String) : [ReportLog]
+    reportLogsByInfoLevel (level: String) : [ReportLog]
+}
+
+type ReportLog {
+    id : ID
+    level : String
+    thread: String
+    traceId: String
+    spanId: String
+    sessionId: String
+    msisdn: String
+    clientIp: String
+    channel: String
+    language: String
+    source: String
+    message: String
+    reportLogKey: String
+
+}
